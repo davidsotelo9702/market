@@ -54,7 +54,7 @@
 
 
       <tr>
-      <td align=center><input type="submit" value="Registrar"></td>
+      <td align=center><input type="submit" value="Registrar producto"></td>
       </tr>
 
 
@@ -63,7 +63,34 @@
 
         </tr>
 </form>
-
-  </body>
-
+</body>
 </html>
+
+<table border=1 align ="center">
+  <tr><th>CÒDIGO</th><th>NOMBRE</th><th>CANTIDAD</th><th>.</th><th>.</th></tr>
+
+<?php
+  //1. coneccion a base de datos
+  include("database.php");
+  //2. crear sql y ejecuto el sql
+  $sql ="SELECT * FROM productos";
+  $result= $conn->query($sql);
+
+  //3. Mostrar informacion
+  if($result->num_rows >0){
+    while ($row = $result->fetch_assoc()) {
+      echo "<tr>";
+      echo "<td>".$row["codigo_prod"]."</td>";
+      echo "<td>".$row["nombre_prod"]."</td>";
+      echo "<td>".$row["cantidad"]."</td>";
+      echo "<td><img src='icons/editar.png'
+      width= '20' ></td>";
+      echo "<td><a href='delete_product.php?cod=".$row["codigo_prod"]."'><img src='icons/delete.png'
+      width= '25' ></td>";
+      echo "</tr>";
+    }
+  }else {
+    echo "::: No hay productos registrados :::";
+  }
+
+?>
