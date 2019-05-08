@@ -14,9 +14,9 @@
 <form name="frm1" action="insert_prod.php" method="POST">
 
 
-<table border="0" align="center">
+<table CELLPADDING=5 CELLSPACING=0 BORDER=0 bordercolor="black" align ="center">
 <tr>
-    <td align="center" ><H1><font face="Times New Roman" size="6" color="black"<b><b>Bienvenidos</font></H1> </td>
+      <td ><H1><font face="Times New Roman" size="6" color="black"<b><b>Mi tienda</font></H1> </td>
 </tr>
 
   <tr>
@@ -50,13 +50,14 @@
       </select>
       </tr>
       </tr>
+    </table>
 
 
-
+<table CELLPADDING=5 CELLSPACING=0 BORDER=0 bordercolor="black" align ="center">
       <tr>
-      <td align=center><input type="submit" value="Registrar producto"></td>
+      <br><td align=center><input type="submit" value="Registrar producto"></td>
       </tr>
-
+</table>
 
 
 
@@ -66,8 +67,8 @@
 </body>
 </html>
 
-<table border=1 align ="center">
-  <tr><th>CÒDIGO</th><th>NOMBRE</th><th>CANTIDAD</th><th>.</th><th>.</th></tr>
+<table CELLPADDING=10 CELLSPACING=2 BORDER=1 bordercolor="black" align ="center">
+  <tr bgcolor="#C0C0C0"><th>CÒDIGO</th><th>NOMBRE</th><th>CANTIDAD</th><th>.</th><th>.</th></tr>
 
 <?php
   //1. coneccion a base de datos
