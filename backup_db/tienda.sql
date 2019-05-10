@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-05-2019 a las 18:51:47
+-- Tiempo de generación: 10-05-2019 a las 04:56:43
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `market`
+-- Base de datos: `tienda`
 --
 
 -- --------------------------------------------------------
@@ -68,7 +68,7 @@ CREATE TABLE `usuarios` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `firstname` varchar(30) COLLATE utf8_bin NOT NULL,
   `lastname` varchar(30) COLLATE utf8_bin NOT NULL,
-  `gender` varchar(1) COLLATE utf8_bin NOT NULL,
+  `sexo` varchar(1) COLLATE utf8_bin NOT NULL,
   `email` varchar(50) COLLATE utf8_bin NOT NULL,
   `password` varchar(50) COLLATE utf8_bin NOT NULL,
   `photo` varchar(50) COLLATE utf8_bin DEFAULT NULL
@@ -78,14 +78,12 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `firstname`, `lastname`, `gender`, `email`, `password`, `photo`) VALUES
-(6, 'Peter', 'McDonald', '', 'peter@gmail.com', '$2y$10$HiZIR8WgxNdF617V2eve5uN4C.xnwbfJQrGX7u/c9d1', NULL),
-(7, 'John', 'Martinez', '', 'john@gmail.com', '$2y$10$S1ggaP9sFaD35Dl17ngEIO2s5eIk/Tbr5Vkz3blBzcq', 'images/img_default.png'),
-(8, 'Kelly', 'Sofia', '', 'kelly@gmail.com', '$2y$10$Avu4GfGY50v05pO0KI2HEO/fx9lWSi0wrNiUGgN0.rs', 'images/img_default.png'),
-(9, 'Mario', 'Urbano', '', 'mario@gmail.com', '$2y$10$dLgScJ0TRDZgI3tJd0XKsOKCPQp39qaiKLezXKkOwtG', 'images/boy.png'),
-(10, 'Juliana', 'Eraso', '', 'juliana@hotmail.com', '$2y$10$AhbgNvMj1ZUiQYSnegc/TuAPKFFG2uywVqsgapGp40n', 'images/boy.png'),
-(11, 'Sofia', 'Lasso', '', 'sofia@gmail.com', '$2y$10$oRdNTVaX.K9LR6ON91Sqj.AxuefYzJrkoduRV6Bn5ds', 'images/girl.png'),
-(12, 'Mariana', 'Korbe', '', 'mariana@yahoo.es', '$2y$10$5Q1ObjUEc5aziXySqmFfmuw9fnRWxTtn9H34OYvt.yM', 'images/img_default.png');
+INSERT INTO `usuarios` (`id`, `firstname`, `lastname`, `sexo`, `email`, `password`, `photo`) VALUES
+(1, 'Peter', 'Alonso', '', 'peter@gmail.com', '$2y$10$8UCrEXNSBY3jFVHq720KI.RGnpbmYkG/0OyYipEjkK2', NULL),
+(2, 'Julio', 'Zabala', '', 'peter1@gmail.com', '$2y$10$MmCH/d2H9FwDmmekGOLtceeWRQ0l58wyFFVSCO9u2Xh', NULL),
+(3, 'Maria', 'Zambrano', '', 'maria@hotmail.com', '$2y$10$apZWPOezhSVvkrUDtkrgs.yXSgCMMnHcpmQbh9bELnS', 'images/avatar_default.png'),
+(4, 'Peter', 'Alonso', 'M', 'peter2@gmail.com', '$2y$10$9u5/tv2hdtkAjZRzgHr1W.rLtgxlWtoWxxZwTbDp.lK', 'images/boy.png'),
+(5, 'Karen', 'Zambrano', 'F', 'peter3@gmail.com', '$2y$10$vF9XD7gUgexQ2KiRHS.UaudX4S7wHFGvrP0KsDbDe0C', 'images/girl.png');
 
 --
 -- Índices para tablas volcadas
@@ -119,7 +117,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
