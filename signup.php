@@ -10,16 +10,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
     function comprobarClave(){
-   	  clave1 = document.f1.pswd.value
-   	  clave2 = document.f1.pswd2.value
-   	  if (clave1 == clave2)
+   	  password1 = document.f1.pswd.value
+   	  password2 = document.f1.pswd2.value
+   	  if (password1 == password2)
 		    document.f1.submit()
         else
-        alert("Las contraseñas son distintas")
+        alert("Digite la misma contraseña")
       }
   </script>
 </head>
 <body>
+
 <div class="container">
   <h2>Sign Up</h2>
   <p>Formulario de registro de usuarios</p>
@@ -36,6 +37,7 @@
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+
 	<div class="form-group">
       <label for="uname">Gender:</label>
       <select name="gender" class="form-control">
@@ -54,17 +56,20 @@
     <div class="form-group">
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-      <div class="valid-feedback">Valid.</div>
+      <div class="help-block">Minimum of 6 characters</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
       <label for="pwd">Confirmar password:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd2" required>
+      <div class="help-block">Minimum of 6 characters</div>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
+
     <button type="button" class="btn btn-primary"  onClick="comprobarClave()"  >Register</button>
-   </form>
-  </div>
- </body>
+  </form>
+</div>
+
+</body>
 </html>

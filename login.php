@@ -10,9 +10,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <div class="container">
   <h2>Login</h2>
-  <form name="form1" action="Val_reg.php" method="POST" class="was-validated">
+    <form   name="form1" action="val_regis.php"  method="POST" class="was-validated">
     <div class="form-group">
       <label for="email">Username:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
